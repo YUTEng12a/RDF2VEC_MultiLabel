@@ -16,7 +16,7 @@ vectors_file = './data/cora/cora.content'
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
 task = 0
 # model option: NB, SVM, KNN, LR, M5
-modelName = "NB"
+modelName = "SVM"
 
 # data manager
 data = data_manager.data_manager.readData(vectors_file)
@@ -39,7 +39,7 @@ vectors_file = './data/FB15K237/FB15K237.content'
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
 task = 0
 # model option: NB, SVM, KNN, LR, M5
-modelName = "MultiLabelNB"
+modelName = "MultiLabelSVM"
 
 # data manager
 data = data_manager.data_manager.readData(vectors_file)
@@ -62,7 +62,7 @@ vectors_file = './data/WN18RR/WN18RR.content'
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
 task = 0
 # model option: NB, SVM, KNN, LR, M5
-modelName = "MultiLabelNB"
+modelName = "MultiLabelSVM"
 
 # data manager
 data = data_manager.data_manager.readData(vectors_file)

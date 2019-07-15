@@ -35,6 +35,8 @@ class Model:
             # 增加适用多标签的贝叶斯
             elif modelName == "MultiLabelNB":
                 self.model =  BinaryRelevance(GaussianNB())
+            elif modelName == "MultiLabelSVM":
+                self.model =  BinaryRelevance(SVC())
             else:
                 print("YOU CHOSE WRONG MODEL FOR CLASSIFICATION!")
         else:
