@@ -32,8 +32,11 @@ class Model:
                 self.model = SVC()
             elif modelName == "C45":
                 self.model = tree.DecisionTreeClassifier
+            # 增加适用多标签的贝叶斯
             elif modelName == "MultiLabelNB":
                 self.model =  BinaryRelevance(GaussianNB())
+            elif modelName == "MultiLabelSVM":
+                self.model =  BinaryRelevance(SVC())
             else:
                 print("YOU CHOSE WRONG MODEL FOR CLASSIFICATION!")
         else:

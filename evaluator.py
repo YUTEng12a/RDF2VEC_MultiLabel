@@ -10,13 +10,13 @@ print("--------------------processing cora data--------------------")
 # input file names
 # the expected label for classification should be named "label"; for regressions should be called "rating"
 # the id should be named "DBpedia_URI15"
-vectors_file = 'E:\\PycharmProjects\\pyGAT\\data\\cora\\cora.content'
+vectors_file = './data/cora/cora.content'
 
 # classification=0;regression=1
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
 task = 0
 # model option: NB, SVM, KNN, LR, M5
-modelName = "NB"
+modelName = "SVM"
 
 # data manager
 data = data_manager.data_manager.readData(vectors_file)
@@ -33,13 +33,13 @@ print("--------------------processing FB15K237 data--------------------")
 # input file names
 # the expected label for classification should be named "label"; for regressions should be called "rating"
 # the id should be named "DBpedia_URI15"
-vectors_file = 'E:\\PycharmProjects\\pyGAT\\data\\FB15K237\\FB15K237.content'
+vectors_file = './data/FB15K237/FB15K237.content'
 
 # classification=0;regression=1
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
 task = 0
 # model option: NB, SVM, KNN, LR, M5
-modelName = "MultiLabelNB"
+modelName = "MultiLabelSVM"
 
 # data manager
 data = data_manager.data_manager.readData(vectors_file)
@@ -56,13 +56,13 @@ print("--------------------processing WN18RR data--------------------")
 # input file names
 # the expected label for classification should be named "label"; for regressions should be called "rating"
 # the id should be named "DBpedia_URI15"
-vectors_file = 'E:\\PycharmProjects\\pyGAT\\data\\WN18RR\\WN18RR.content'
+vectors_file = './data/WN18RR/WN18RR.content'
 
 # classification=0;regression=1
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
 task = 0
 # model option: NB, SVM, KNN, LR, M5
-modelName = "MultiLabelNB"
+modelName = "MultiLabelSVM"
 
 # data manager
 data = data_manager.data_manager.readData(vectors_file)
