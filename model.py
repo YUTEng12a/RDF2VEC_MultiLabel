@@ -12,6 +12,7 @@ from sklearn import datasets, linear_model
 from sklearn.model_selection import cross_val_score
 import numpy as np
 import pandas as pd
+np.set_printoptions(threshold=np.inf)
 
 
 class Model:
