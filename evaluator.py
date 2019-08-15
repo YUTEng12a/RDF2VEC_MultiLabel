@@ -20,9 +20,9 @@ data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model = model.Model(task, modelName)
+model1 = model.Model(task, modelName)
 # train and print score
-model.train(data)
+model1.train(data)
 
 
 print("--------------------processing cora data: SVM--------------------")
@@ -41,9 +41,9 @@ data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model = model.Model(task, modelName)
+model1 = model.Model(task, modelName)
 # train and print score
-model.train(data)
+model1.train(data)
 
 print("--------------------processing FB15K237 data: mult NB--------------------")
 
@@ -61,9 +61,9 @@ data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model = model.Model(task, modelName)
+model1 = model.Model(task, modelName)
 # train and print score
-model.train(data, True)
+model1.train(data, True)
 
 
 print("--------------------processing FB15K237 data: mult SVM--------------------")
@@ -82,9 +82,9 @@ data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model = model.Model(task, modelName)
+model1 = model.Model(task, modelName)
 # train and print score
-model.train(data, True)
+model1.train(data, True)
 
 print("--------------------processing WN18RR data: mult NB--------------------")
 
@@ -102,9 +102,9 @@ data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model = model.Model(task, modelName)
+model1 = model.Model(task, modelName)
 # train and print score
-model.train(data, True)
+model1.train(data, True)
 
 
 print("--------------------processing WN18RR data: mult SVM--------------------")
@@ -123,9 +123,9 @@ data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model = model.Model(task, modelName)
+model1 = model.Model(task, modelName)
 # train and print score
-model.train(data, True)
+model1.train(data, True)
 
 print("--------------------processing WN18RR_sub30000 data: mult NB--------------------")
 
@@ -143,9 +143,9 @@ data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model = model.Model(task, modelName)
+model1 = model.Model(task, modelName)
 # train and print score
-model.train(data, True)
+model1.train(data, True)
 
 
 print("--------------------processing WN18RR_sub30000 data: mult SVM--------------------")
@@ -164,7 +164,7 @@ data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model = model.Model(task, modelName)
+model1 = model.Model(task, modelName)
 # train and print score
-model.train(data, True)
+model1.train(data, True)
                         
