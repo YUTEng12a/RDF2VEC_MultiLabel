@@ -10,5 +10,5 @@ class data_manager:
         if dataset == 'cora':
             vectors = pd.read_csv(vectors_file, "\t", header=None)
         else:
-            vectors = pd.read_csv(vectors_file, "\t", header=None).values()[:, 1:]
+            vectors = pd.read_csv(vectors_file, "\t", header=None).loc[:, 1:]
         return vectors
