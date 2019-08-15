@@ -6,7 +6,9 @@ class data_manager:
         print("initiated")
 
     @staticmethod
-    def readData(vectors_file):
-        vectors = pd.read_csv(vectors_file, "\t", header=None)
-        # print(vectors)
+    def readData(vectors_file, dataset):
+        if dataset == 'cora':
+            vectors = pd.read_csv(vectors_file, "\t", header=None)
+        else:
+            vectors = pd.read_csv(vectors_file, "\t", header=None)[1:]
         return vectors

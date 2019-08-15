@@ -5,12 +5,9 @@ import model
 
 
 print("--------------------processing cora data: NB--------------------")
-# parameters
 
-# input file names
-# the expected label for classification should be named "label"; for regressions should be called "rating"
-# the id should be named "DBpedia_URI15"
-vectors_file = './data/cora/cora.content'
+dataset = 'cora'
+vectors_file = './data/{}/{}.content'.format(dataset, dataset)
 
 # classification=0;regression=1
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
@@ -19,22 +16,19 @@ task = 0
 modelName = "NB"
 
 # data manager
-data = data_manager.data_manager.readData(vectors_file)
+data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model1 = model.Model(task, modelName)
+model = model.Model(task, modelName)
 # train and print score
-model1.train(data)
+model.train(data)
 
 
 print("--------------------processing cora data: SVM--------------------")
-# parameters
 
-# input file names
-# the expected label for classification should be named "label"; for regressions should be called "rating"
-# the id should be named "DBpedia_URI15"
-vectors_file = './data/cora/cora.content'
+dataset = 'cora'
+vectors_file = './data/{}/{}.content'.format(dataset, dataset)
 
 # classification=0;regression=1
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
@@ -43,21 +37,18 @@ task = 0
 modelName = "SVM"
 
 # data manager
-data = data_manager.data_manager.readData(vectors_file)
+data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model1 = model.Model(task, modelName)
+model = model.Model(task, modelName)
 # train and print score
-model1.train(data)
+model.train(data)
 
 print("--------------------processing FB15K237 data: mult NB--------------------")
-# parameters
 
-# input file names
-# the expected label for classification should be named "label"; for regressions should be called "rating"
-# the id should be named "DBpedia_URI15"
-vectors_file = './data/FB15K237/FB15K237.content'
+dataset = 'FB15K237'
+vectors_file = './data/{}/{}.content'.format(dataset, dataset)
 
 # classification=0;regression=1
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
@@ -66,22 +57,19 @@ task = 0
 modelName = "MultiLabelNB"
 
 # data manager
-data = data_manager.data_manager.readData(vectors_file)
+data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model2 = model.Model(task, modelName)
+model = model.Model(task, modelName)
 # train and print score
-model2.train(data, True)
+model.train(data, True)
 
 
 print("--------------------processing FB15K237 data: mult SVM--------------------")
-# parameters
 
-# input file names
-# the expected label for classification should be named "label"; for regressions should be called "rating"
-# the id should be named "DBpedia_URI15"
-vectors_file = './data/FB15K237/FB15K237.content'
+dataset = 'FB15K237'
+vectors_file = './data/{}/{}.content'.format(dataset, dataset)
 
 # classification=0;regression=1
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
@@ -90,21 +78,18 @@ task = 0
 modelName = "MultiLabelSVM"
 
 # data manager
-data = data_manager.data_manager.readData(vectors_file)
+data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model2 = model.Model(task, modelName)
+model = model.Model(task, modelName)
 # train and print score
-model2.train(data, True)
+model.train(data, True)
 
 print("--------------------processing WN18RR data: mult NB--------------------")
-# parameters
 
-# input file names
-# the expected label for classification should be named "label"; for regressions should be called "rating"
-# the id should be named "DBpedia_URI15"
-vectors_file = './data/WN18RR/WN18RR.content'
+dataset = 'WN18RR'
+vectors_file = './data/{}/{}.content'.format(dataset, dataset)
 
 # classification=0;regression=1
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
@@ -113,22 +98,19 @@ task = 0
 modelName = "MultiLabelNB"
 
 # data manager
-data = data_manager.data_manager.readData(vectors_file)
+data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model3 = model.Model(task, modelName)
+model = model.Model(task, modelName)
 # train and print score
-model3.train(data, True)
+model.train(data, True)
 
 
 print("--------------------processing WN18RR data: mult SVM--------------------")
-# parameters
 
-# input file names
-# the expected label for classification should be named "label"; for regressions should be called "rating"
-# the id should be named "DBpedia_URI15"
-vectors_file = './data/WN18RR/WN18RR.content'
+dataset = 'WN18RR'
+vectors_file = './data/{}/{}.content'.format(dataset, dataset)
 
 # classification=0;regression=1
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
@@ -137,21 +119,18 @@ task = 0
 modelName = "MultiLabelSVM"
 
 # data manager
-data = data_manager.data_manager.readData(vectors_file)
+data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model3 = model.Model(task, modelName)
+model = model.Model(task, modelName)
 # train and print score
-model3.train(data, True)
+model.train(data, True)
 
 print("--------------------processing WN18RR_sub30000 data: mult NB--------------------")
-# parameters
 
-# input file names
-# the expected label for classification should be named "label"; for regressions should be called "rating"
-# the id should be named "DBpedia_URI15"
-vectors_file = './data/WN18RR_sub30000/WN18RR_sub30000.content'
+dataset = 'WN18RR_sub30000'
+vectors_file = './data/{}/{}.content'.format(dataset, dataset)
 
 # classification=0;regression=1
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
@@ -160,22 +139,19 @@ task = 0
 modelName = "MultiLabelNB"
 
 # data manager
-data = data_manager.data_manager.readData(vectors_file)
+data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model3 = model.Model(task, modelName)
+model = model.Model(task, modelName)
 # train and print score
-model3.train(data, True)
+model.train(data, True)
 
 
 print("--------------------processing WN18RR_sub30000 data: mult SVM--------------------")
-# parameters
 
-# input file names
-# the expected label for classification should be named "label"; for regressions should be called "rating"
-# the id should be named "DBpedia_URI15"
-vectors_file = './data/WN18RR_sub30000/WN18RR_sub30000.content'
+dataset = 'WN18RR_sub30000'
+vectors_file = './data/{}/{}.content'.format(dataset, dataset)
 
 # classification=0;regression=1
 # in case of regression, neg_mean_squared_error is used; to calculate RMSE simply calculate the root
@@ -184,11 +160,11 @@ task = 0
 modelName = "MultiLabelSVM"
 
 # data manager
-data = data_manager.data_manager.readData(vectors_file)
+data = data_manager.data_manager.readData(vectors_file, dataset)
 data = data.sample(frac=1).reset_index(drop=True)
 
 # initialize the model
-model3 = model.Model(task, modelName)
+model = model.Model(task, modelName)
 # train and print score
-model3.train(data, True)
+model.train(data, True)
                         
